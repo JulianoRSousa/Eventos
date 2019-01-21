@@ -10,38 +10,8 @@ namespace Eventos
 {
     public class MySqlClassConnection
     {
-        
-
         private Gerenciador Gerenciador = new Gerenciador();
-        
-      /*  public ModelUsuario ObterDados(string email, string senha)
-        {
-            ModelUsuario dados = new ModelUsuario();
-            
-            try
-            {
-                MyConnection = "datasource = localhost; port = 3306; username = root; password = root";
-                MySqlConnection MyConn = new MySqlConnection(MyConnection);
-                MyConn.Open();
-                MySqlCommand SelectCommand = new MySqlCommand("SELECT * FROM teste.usuario WHERE email='" + email + "' AND senha='" + senha + "';", MyConn);
-                MySqlDataReader MyReader = SelectCommand.ExecuteReader();
-                if (MyReader.HasRows)
-                {
-                    while (MyReader.Read())
-                    {
-                    }
-                }
-                MyConn.Close();
-                return dados;
-            }
-            catch (Exception ex)
-            {
-                Console.Write(ex.Message);
-                return dados;
-            }
-        }
-        */
-
+       
         //Retorna Valor do campo especificado utilizando 2 parametros(comunmente usuario e senha)*(podendo ser outro)
         public String SelectGetString(String Campo, String Database, String Tabela, String Parametro1, String Valor1, String Parametro2, String Valor2)
         {
@@ -100,31 +70,27 @@ namespace Eventos
             }
         }
 
+        //Retorna a existencia ou não da busca no banco de dados
         public bool SelectComand(String comand)
         {
+            MySqlConnection MyConn = new MySqlConnection("datasource=" + Gerenciador.DbEndereço + ";port=" + Gerenciador.DbPorta + ";username=" + Gerenciador.DbAdminUserLogin + ";password=" + Gerenciador.DbAdminPassLogin + ";");
+            MySqlDataReader MyReader;
+            MySqlCommand SelectCommand = new MySqlCommand(comand, MyConn);
             try
             {
-                String MyConnection = "datasource=" + Gerenciador.DbEndereço + ";port=" + Gerenciador.DbPorta + ";username=" + Gerenciador.DbAdminUserLogin + ";password=" + Gerenciador.DbAdminPassLogin + ";";
                 int count = 0;
-                MySqlConnection MyConn = new MySqlConnection(MyConnection);
                 MyConn.Open();
-                MySqlDataReader MyReader;
-                MySqlCommand SelectCommand = new MySqlCommand(comand, MyConn);
                 MyReader = SelectCommand.ExecuteReader();
                 while (MyReader.Read())
                 {
                     count = count + 1;
                 }
-                if (count == 1)
+                if (count != 0)
                 {
-                    MessageBox.Show("count  == 1 (SelectComand)");
-                    MyConn.Close();
                     return true;
                 }
                 else
                 {
-                    MessageBox.Show("count  < 1 (SelectComand)");
-                    MyConn.Close();
                     return false;
                 }
             }
@@ -132,6 +98,10 @@ namespace Eventos
             {
                 MessageBox.Show(ex.Message);
                 return false;
+            }
+            finally
+            {
+                MyConn.Close();
             }
         }
         

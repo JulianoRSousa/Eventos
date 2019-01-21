@@ -31,14 +31,7 @@
             this.panelLeftLogin = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelLogin = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panelTermos = new System.Windows.Forms.Panel();
-            this.buttonTermosVoltar = new System.Windows.Forms.Button();
-            this.labelTermosTexto2 = new System.Windows.Forms.Label();
-            this.labelTermosTexto1 = new System.Windows.Forms.Label();
-            this.labelTermosSubtitulo2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.labelTermosSubtitulo1 = new System.Windows.Forms.Label();
+            this.labelEsqueciMinhaSenhaLogin = new System.Windows.Forms.Label();
             this.labelEmailSenhaInvalida = new System.Windows.Forms.Label();
             this.textBoxSenhaLogin = new System.Windows.Forms.TextBox();
             this.labelLoginSenha = new System.Windows.Forms.Label();
@@ -50,15 +43,22 @@
             this.button1 = new System.Windows.Forms.Button();
             this.labelNaoTemUmaConta = new System.Windows.Forms.Label();
             this.buttonEntrar = new System.Windows.Forms.Button();
+            this.panelTermos = new System.Windows.Forms.Panel();
+            this.buttonTermosVoltar = new System.Windows.Forms.Button();
+            this.labelTermosTexto2 = new System.Windows.Forms.Label();
+            this.labelTermosTexto1 = new System.Windows.Forms.Label();
+            this.labelTermosSubtitulo2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.labelTermosSubtitulo1 = new System.Windows.Forms.Label();
             this.panelCriarConta = new System.Windows.Forms.Panel();
             this.labelEntre = new System.Windows.Forms.Label();
             this.labelTermosDePrivacidade = new System.Windows.Forms.Label();
             this.labelAoCriarUmaConta = new System.Windows.Forms.Label();
             this.buttonCriarConta = new System.Windows.Forms.Button();
-            this.labelSenha = new System.Windows.Forms.Label();
+            this.labelSenhaCadastro = new System.Windows.Forms.Label();
             this.labelCadastroContaInvalida = new System.Windows.Forms.Label();
             this.textBoxSenhaCadastro = new System.Windows.Forms.TextBox();
-            this.labelEmail = new System.Windows.Forms.Label();
+            this.labelEmailCadastro = new System.Windows.Forms.Label();
             this.textBoxEmailCadastro = new System.Windows.Forms.TextBox();
             this.labelSobrenome = new System.Windows.Forms.Label();
             this.textBoxSobrenomeCadastro = new System.Windows.Forms.TextBox();
@@ -74,8 +74,8 @@
             this.panelLeftLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelLogin.SuspendLayout();
-            this.panelTermos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panelTermos.SuspendLayout();
             this.panelCriarConta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -101,7 +101,7 @@
             // 
             // panelLogin
             // 
-            this.panelLogin.Controls.Add(this.label1);
+            this.panelLogin.Controls.Add(this.labelEsqueciMinhaSenhaLogin);
             this.panelLogin.Controls.Add(this.labelEmailSenhaInvalida);
             this.panelLogin.Controls.Add(this.textBoxSenhaLogin);
             this.panelLogin.Controls.Add(this.labelLoginSenha);
@@ -122,101 +122,22 @@
             this.panelLogin.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelLogin_MouseDown);
             this.panelLogin.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelLogin_MouseMove);
             // 
-            // label1
+            // labelEsqueciMinhaSenhaLogin
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.labelEsqueciMinhaSenhaLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label1.Location = new System.Drawing.Point(95, 444);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(410, 16);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "Esqueci minha Senha!";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Visible = false;
-            // 
-            // panelTermos
-            // 
-            this.panelTermos.Controls.Add(this.buttonTermosVoltar);
-            this.panelTermos.Controls.Add(this.labelTermosTexto2);
-            this.panelTermos.Controls.Add(this.labelTermosTexto1);
-            this.panelTermos.Controls.Add(this.labelTermosSubtitulo2);
-            this.panelTermos.Controls.Add(this.label4);
-            this.panelTermos.Controls.Add(this.labelTermosSubtitulo1);
-            this.panelTermos.Location = new System.Drawing.Point(0, 20);
-            this.panelTermos.Margin = new System.Windows.Forms.Padding(0);
-            this.panelTermos.Name = "panelTermos";
-            this.panelTermos.Size = new System.Drawing.Size(600, 580);
-            this.panelTermos.TabIndex = 1;
-            this.panelTermos.Visible = false;
-            // 
-            // buttonTermosVoltar
-            // 
-            this.buttonTermosVoltar.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
-            this.buttonTermosVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTermosVoltar.Font = new System.Drawing.Font("Script MT Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTermosVoltar.Location = new System.Drawing.Point(0, 0);
-            this.buttonTermosVoltar.Name = "buttonTermosVoltar";
-            this.buttonTermosVoltar.Size = new System.Drawing.Size(67, 37);
-            this.buttonTermosVoltar.TabIndex = 29;
-            this.buttonTermosVoltar.Text = "Voltar";
-            this.buttonTermosVoltar.UseVisualStyleBackColor = true;
-            this.buttonTermosVoltar.Click += new System.EventHandler(this.buttonTermosVoltar_Click);
-            // 
-            // labelTermosTexto2
-            // 
-            this.labelTermosTexto2.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTermosTexto2.Location = new System.Drawing.Point(40, 415);
-            this.labelTermosTexto2.Name = "labelTermosTexto2";
-            this.labelTermosTexto2.Size = new System.Drawing.Size(520, 133);
-            this.labelTermosTexto2.TabIndex = 28;
-            this.labelTermosTexto2.Text = "Paragráfo final dos termos e politicas de privacidade!";
-            this.labelTermosTexto2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelTermosTexto1
-            // 
-            this.labelTermosTexto1.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTermosTexto1.Location = new System.Drawing.Point(40, 245);
-            this.labelTermosTexto1.Name = "labelTermosTexto1";
-            this.labelTermosTexto1.Size = new System.Drawing.Size(520, 133);
-            this.labelTermosTexto1.TabIndex = 27;
-            this.labelTermosTexto1.Text = "Paragráfo inicial dos termos e politicas de privacidade!";
-            this.labelTermosTexto1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelTermosSubtitulo2
-            // 
-            this.labelTermosSubtitulo2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTermosSubtitulo2.Location = new System.Drawing.Point(10, 378);
-            this.labelTermosSubtitulo2.Name = "labelTermosSubtitulo2";
-            this.labelTermosSubtitulo2.Size = new System.Drawing.Size(580, 23);
-            this.labelTermosSubtitulo2.TabIndex = 26;
-            this.labelTermosSubtitulo2.Text = "Subtitulo2";
-            this.labelTermosSubtitulo2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.Font = new System.Drawing.Font("Freestyle Script", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(86, 88);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(410, 55);
-            this.label4.TabIndex = 25;
-            this.label4.Text = "Termos de Privacidade";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelTermosSubtitulo1
-            // 
-            this.labelTermosSubtitulo1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTermosSubtitulo1.Location = new System.Drawing.Point(10, 209);
-            this.labelTermosSubtitulo1.Name = "labelTermosSubtitulo1";
-            this.labelTermosSubtitulo1.Size = new System.Drawing.Size(580, 23);
-            this.labelTermosSubtitulo1.TabIndex = 0;
-            this.labelTermosSubtitulo1.Text = "Subtitulo1";
-            this.labelTermosSubtitulo1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelEsqueciMinhaSenhaLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelEsqueciMinhaSenhaLogin.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEsqueciMinhaSenhaLogin.ForeColor = System.Drawing.Color.OrangeRed;
+            this.labelEsqueciMinhaSenhaLogin.Location = new System.Drawing.Point(95, 444);
+            this.labelEsqueciMinhaSenhaLogin.Name = "labelEsqueciMinhaSenhaLogin";
+            this.labelEsqueciMinhaSenhaLogin.Size = new System.Drawing.Size(410, 26);
+            this.labelEsqueciMinhaSenhaLogin.TabIndex = 26;
+            this.labelEsqueciMinhaSenhaLogin.Text = "Esqueci minha Senha!";
+            this.labelEsqueciMinhaSenhaLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelEsqueciMinhaSenhaLogin.Visible = false;
+            this.labelEsqueciMinhaSenhaLogin.Click += new System.EventHandler(this.labelEsqueciMinhaSenhaLogin_Click);
             // 
             // labelEmailSenhaInvalida
             // 
@@ -372,6 +293,87 @@
             this.buttonEntrar.UseVisualStyleBackColor = false;
             this.buttonEntrar.Click += new System.EventHandler(this.buttonEntrar_Click);
             // 
+            // panelTermos
+            // 
+            this.panelTermos.Controls.Add(this.buttonTermosVoltar);
+            this.panelTermos.Controls.Add(this.labelTermosTexto2);
+            this.panelTermos.Controls.Add(this.labelTermosTexto1);
+            this.panelTermos.Controls.Add(this.labelTermosSubtitulo2);
+            this.panelTermos.Controls.Add(this.label4);
+            this.panelTermos.Controls.Add(this.labelTermosSubtitulo1);
+            this.panelTermos.Location = new System.Drawing.Point(0, 20);
+            this.panelTermos.Margin = new System.Windows.Forms.Padding(0);
+            this.panelTermos.Name = "panelTermos";
+            this.panelTermos.Size = new System.Drawing.Size(600, 580);
+            this.panelTermos.TabIndex = 1;
+            this.panelTermos.Visible = false;
+            // 
+            // buttonTermosVoltar
+            // 
+            this.buttonTermosVoltar.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
+            this.buttonTermosVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTermosVoltar.Font = new System.Drawing.Font("Script MT Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTermosVoltar.Location = new System.Drawing.Point(0, 0);
+            this.buttonTermosVoltar.Name = "buttonTermosVoltar";
+            this.buttonTermosVoltar.Size = new System.Drawing.Size(67, 37);
+            this.buttonTermosVoltar.TabIndex = 29;
+            this.buttonTermosVoltar.Text = "Voltar";
+            this.buttonTermosVoltar.UseVisualStyleBackColor = true;
+            this.buttonTermosVoltar.Click += new System.EventHandler(this.buttonTermosVoltar_Click);
+            // 
+            // labelTermosTexto2
+            // 
+            this.labelTermosTexto2.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTermosTexto2.Location = new System.Drawing.Point(40, 415);
+            this.labelTermosTexto2.Name = "labelTermosTexto2";
+            this.labelTermosTexto2.Size = new System.Drawing.Size(520, 133);
+            this.labelTermosTexto2.TabIndex = 28;
+            this.labelTermosTexto2.Text = "Paragráfo final dos termos e politicas de privacidade!";
+            this.labelTermosTexto2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelTermosTexto1
+            // 
+            this.labelTermosTexto1.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTermosTexto1.Location = new System.Drawing.Point(40, 245);
+            this.labelTermosTexto1.Name = "labelTermosTexto1";
+            this.labelTermosTexto1.Size = new System.Drawing.Size(520, 133);
+            this.labelTermosTexto1.TabIndex = 27;
+            this.labelTermosTexto1.Text = "Paragráfo inicial dos termos e politicas de privacidade!";
+            this.labelTermosTexto1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelTermosSubtitulo2
+            // 
+            this.labelTermosSubtitulo2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTermosSubtitulo2.Location = new System.Drawing.Point(10, 378);
+            this.labelTermosSubtitulo2.Name = "labelTermosSubtitulo2";
+            this.labelTermosSubtitulo2.Size = new System.Drawing.Size(580, 23);
+            this.labelTermosSubtitulo2.TabIndex = 26;
+            this.labelTermosSubtitulo2.Text = "Subtitulo2";
+            this.labelTermosSubtitulo2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.Font = new System.Drawing.Font("Freestyle Script", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(86, 88);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(410, 55);
+            this.label4.TabIndex = 25;
+            this.label4.Text = "Termos de Privacidade";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelTermosSubtitulo1
+            // 
+            this.labelTermosSubtitulo1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTermosSubtitulo1.Location = new System.Drawing.Point(10, 209);
+            this.labelTermosSubtitulo1.Name = "labelTermosSubtitulo1";
+            this.labelTermosSubtitulo1.Size = new System.Drawing.Size(580, 23);
+            this.labelTermosSubtitulo1.TabIndex = 0;
+            this.labelTermosSubtitulo1.Text = "Subtitulo1";
+            this.labelTermosSubtitulo1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // panelCriarConta
             // 
             this.panelCriarConta.Controls.Add(this.panelLogin);
@@ -380,10 +382,10 @@
             this.panelCriarConta.Controls.Add(this.labelTermosDePrivacidade);
             this.panelCriarConta.Controls.Add(this.labelAoCriarUmaConta);
             this.panelCriarConta.Controls.Add(this.buttonCriarConta);
-            this.panelCriarConta.Controls.Add(this.labelSenha);
+            this.panelCriarConta.Controls.Add(this.labelSenhaCadastro);
             this.panelCriarConta.Controls.Add(this.labelCadastroContaInvalida);
             this.panelCriarConta.Controls.Add(this.textBoxSenhaCadastro);
-            this.panelCriarConta.Controls.Add(this.labelEmail);
+            this.panelCriarConta.Controls.Add(this.labelEmailCadastro);
             this.panelCriarConta.Controls.Add(this.textBoxEmailCadastro);
             this.panelCriarConta.Controls.Add(this.labelSobrenome);
             this.panelCriarConta.Controls.Add(this.textBoxSobrenomeCadastro);
@@ -418,6 +420,7 @@
             this.labelEntre.TabIndex = 6;
             this.labelEntre.Text = "Entre";
             this.labelEntre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelEntre.Click += new System.EventHandler(this.labelEntre_Click);
             this.labelEntre.MouseClick += new System.Windows.Forms.MouseEventHandler(this.labelEntre_MouseClick);
             // 
             // labelTermosDePrivacidade
@@ -466,20 +469,20 @@
             this.buttonCriarConta.UseVisualStyleBackColor = false;
             this.buttonCriarConta.Click += new System.EventHandler(this.buttonCriarConta_Click);
             // 
-            // labelSenha
+            // labelSenhaCadastro
             // 
-            this.labelSenha.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.labelSenhaCadastro.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelSenha.BackColor = System.Drawing.Color.Transparent;
-            this.labelSenha.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSenha.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.labelSenha.Location = new System.Drawing.Point(95, 404);
-            this.labelSenha.Name = "labelSenha";
-            this.labelSenha.Size = new System.Drawing.Size(410, 16);
-            this.labelSenha.TabIndex = 14;
-            this.labelSenha.Text = "Senha *";
-            this.labelSenha.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.labelSenhaCadastro.BackColor = System.Drawing.Color.Transparent;
+            this.labelSenhaCadastro.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSenhaCadastro.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.labelSenhaCadastro.Location = new System.Drawing.Point(95, 404);
+            this.labelSenhaCadastro.Name = "labelSenhaCadastro";
+            this.labelSenhaCadastro.Size = new System.Drawing.Size(410, 16);
+            this.labelSenhaCadastro.TabIndex = 14;
+            this.labelSenhaCadastro.Text = "Senha *";
+            this.labelSenhaCadastro.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // labelCadastroContaInvalida
             // 
@@ -510,20 +513,20 @@
             this.textBoxSenhaCadastro.Size = new System.Drawing.Size(410, 31);
             this.textBoxSenhaCadastro.TabIndex = 13;
             // 
-            // labelEmail
+            // labelEmailCadastro
             // 
-            this.labelEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.labelEmailCadastro.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelEmail.BackColor = System.Drawing.Color.Transparent;
-            this.labelEmail.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEmail.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.labelEmail.Location = new System.Drawing.Point(95, 343);
-            this.labelEmail.Name = "labelEmail";
-            this.labelEmail.Size = new System.Drawing.Size(410, 17);
-            this.labelEmail.TabIndex = 12;
-            this.labelEmail.Text = "Email *";
-            this.labelEmail.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.labelEmailCadastro.BackColor = System.Drawing.Color.Transparent;
+            this.labelEmailCadastro.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEmailCadastro.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.labelEmailCadastro.Location = new System.Drawing.Point(95, 343);
+            this.labelEmailCadastro.Name = "labelEmailCadastro";
+            this.labelEmailCadastro.Size = new System.Drawing.Size(410, 17);
+            this.labelEmailCadastro.TabIndex = 12;
+            this.labelEmailCadastro.Text = "Email *";
+            this.labelEmailCadastro.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // textBoxEmailCadastro
             // 
@@ -710,8 +713,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelLogin.ResumeLayout(false);
             this.panelLogin.PerformLayout();
-            this.panelTermos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panelTermos.ResumeLayout(false);
             this.panelCriarConta.ResumeLayout(false);
             this.panelCriarConta.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -734,9 +737,9 @@
         private System.Windows.Forms.Label labelTermosDePrivacidade;
         private System.Windows.Forms.Label labelAoCriarUmaConta;
         private System.Windows.Forms.Button buttonCriarConta;
-        private System.Windows.Forms.Label labelSenha;
+        private System.Windows.Forms.Label labelSenhaCadastro;
         private System.Windows.Forms.TextBox textBoxSenhaCadastro;
-        private System.Windows.Forms.Label labelEmail;
+        private System.Windows.Forms.Label labelEmailCadastro;
         private System.Windows.Forms.TextBox textBoxEmailCadastro;
         private System.Windows.Forms.Label labelSobrenome;
         private System.Windows.Forms.TextBox textBoxSobrenomeCadastro;
@@ -762,7 +765,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label labelTermosSubtitulo1;
         private System.Windows.Forms.Label labelEmailSenhaInvalida;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelEsqueciMinhaSenhaLogin;
         private System.Windows.Forms.Label labelEsqueciMinhaSenha;
     }
 }

@@ -33,15 +33,6 @@ namespace Eventos
                 login.ShowDialog();
             }
         }
-        private String CarregarDados(String user, String pass)
-        {
-            return "";// MyConn.Select(user,pass);
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            labelNome.Text = this.CarregarDados(controller.getUser(), controller.getPass());
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {

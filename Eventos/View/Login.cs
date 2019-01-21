@@ -105,12 +105,27 @@ namespace Eventos
                     panelCriarConta.BringToFront();
                     panelLogin.Hide();
                     panelTermos.Hide();
+                    labelNome.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+                    labelSobrenome.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+                    labelEmailCadastro.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+                    labelSenhaCadastro.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+                    labelCadastroContaInvalida.Hide();
+                    textBoxEmailCadastro.Text = "";
+                    textBoxSenhaCadastro.Text = "";
+                    textBoxNomeCadastro.Text = "";
+                    textBoxSobrenomeCadastro.Text = "";
                     break;
                 case "Login":
                     panelCriarConta.Show();
                     panelLogin.Show();
                     panelLogin.BringToFront();
                     panelTermos.Hide();
+                    labelEsqueciMinhaSenhaLogin.Hide();
+                    labelEmailSenhaInvalida.Hide();
+                    labelLoginEmail.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+                    labelLoginSenha.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+                    textBoxEmailLogin.Text = "";
+                    textBoxSenhaLogin.Text = "";
                     break;
                 case "Termos de privacidade":
                     panelCriarConta.Show();
@@ -126,15 +141,15 @@ namespace Eventos
                     labelEmailSenhaInvalida.Show();
                     labelLoginEmail.ForeColor = System.Drawing.Color.Tomato;
                     labelLoginSenha.ForeColor = System.Drawing.Color.Tomato;
-                    labelEsqueciMinhaSenha.Show();
+                    labelEsqueciMinhaSenhaLogin.Show();
                     break;
                 case "Erro Cadastro":
                     panelCriarConta.Show();
                     panelLogin.Hide();
                     panelTermos.Hide();
                     labelCadastroContaInvalida.Show();
-                    labelEmail.ForeColor = System.Drawing.Color.Tomato;
-                    labelSenha.ForeColor = System.Drawing.Color.Tomato;
+                    labelEmailCadastro.ForeColor = System.Drawing.Color.Tomato;
+                    labelSenhaCadastro.ForeColor = System.Drawing.Color.Tomato;
                     labelNome.ForeColor = System.Drawing.Color.Tomato;
                     labelSobrenome.ForeColor = System.Drawing.Color.Tomato;
                     break;
@@ -194,6 +209,11 @@ namespace Eventos
                     ConfigurarTelaLogin("Erro Login");
                     return;
                 }
+                else
+                {
+                    ConfigurarTelaLogin("Erro Login");
+                }
+
                 
             }
 
@@ -222,6 +242,16 @@ namespace Eventos
                     ConfigurarTelaLogin("Esqueci minha senha");
                 }
             }
+        }
+
+        private void labelEntre_Click(object sender, EventArgs e)
+        {
+            ConfigurarTelaLogin("Login");
+        }
+
+        private void labelEsqueciMinhaSenhaLogin_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

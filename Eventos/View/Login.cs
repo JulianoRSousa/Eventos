@@ -13,7 +13,7 @@ namespace Eventos
 {
     public partial class Login : Form
     {
-        private LoginController Controller = new LoginController();
+        private LoginController LoginController = new LoginController();
         private int X = 0;
         private int Y = 0;
 
@@ -28,7 +28,7 @@ namespace Eventos
         //Reconectar usuário
         private void Reconectar()
         {
-            if (Controller.Reconectar())
+            if (LoginController.Reconectar())
                 ConfigurarTelaLogin("Inicio");
             else
                 ConfigurarTelaLogin("Criar Conta");
@@ -72,14 +72,31 @@ namespace Eventos
             Application.Exit();
         }
 
+        //Fechar
+        public void Fechar()
+        {
+            for (int intIndex = Application.OpenForms.Count - 1; intIndex >= 0; intIndex--)
+            {
+                if (Application.OpenForms[intIndex] != this)
+                    Application.OpenForms[intIndex].Close();
+            }
+            this.Close();
+        }
+
         //Minimizar
         private void buttonMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
+        //botão voltar
+        private void buttonTermosVoltar_Click(object sender, EventArgs e)
+        {
+            ConfigurarTelaLogin("Criar Conta");
+        }
+        
         //Configurar tela
-        private void ConfigurarTelaLogin(String tela)
+        public void ConfigurarTelaLogin(String tela)
         {
             switch (tela)
             {
@@ -109,6 +126,7 @@ namespace Eventos
                     labelEmailSenhaInvalida.Show();
                     labelLoginEmail.ForeColor = System.Drawing.Color.Tomato;
                     labelLoginSenha.ForeColor = System.Drawing.Color.Tomato;
+                    labelEsqueciMinhaSenha.Show();
                     break;
                 case "Erro Cadastro":
                     panelCriarConta.Show();
@@ -120,23 +138,20 @@ namespace Eventos
                     labelNome.ForeColor = System.Drawing.Color.Tomato;
                     labelSobrenome.ForeColor = System.Drawing.Color.Tomato;
                     break;
+                case "Email já cadastrado":
+                    panelCriarConta.Show();
+                    MessageBox.Show("Email já cadastrado!");
+                    panelLogin.Show();
+                    panelLogin.BringToFront();
+                    panelTermos.Hide();
+                    labelEsqueciMinhaSenha.Show();
+                    break;
                 case "Inicio":
                     this.Close();
                     break;
             }
         }
-
-        //Fechar
-        public void Fechar()
-        {
-            for (int intIndex = Application.OpenForms.Count - 1; intIndex >= 0; intIndex--)
-            {
-                if (Application.OpenForms[intIndex] != this)
-                    Application.OpenForms[intIndex].Close();
-            }
-            this.Close();
-        }
-
+        
         //tela login
         private void labelEntre_MouseClick(object sender, MouseEventArgs e)
         {
@@ -160,30 +175,26 @@ namespace Eventos
         {
             ConfigurarTelaLogin("Termos de privacidade");
         }
-
-        //botão voltar
-        private void buttonTermosVoltar_Click(object sender, EventArgs e)
-        {
-            ConfigurarTelaLogin("Criar Conta");
-        }
         
         //Login
         private void buttonEntrar_Click(object sender, EventArgs e)
         {
             String vazio = "";
 
-            if ((textBoxEmailLogin.Text != vazio) && (textBoxSenhaLogin.Text != vazio) && Controller.Entrar(textBoxEmailLogin.Text, textBoxSenhaLogin.Text))
+            if ((textBoxEmailLogin.Text != vazio) && (textBoxSenhaLogin.Text != vazio) && LoginController.Entrar(textBoxEmailLogin.Text, textBoxSenhaLogin.Text))
             {
                 ConfigurarTelaLogin("Inicio");
-                Controller.SalvarDados(textBoxEmailLogin.Text, textBoxSenhaLogin.Text);
+                LoginController.SalvarCache(textBoxEmailLogin.Text, textBoxSenhaLogin.Text);
             }
             else
             {
                 if ((textBoxEmailLogin.Text != vazio) || (textBoxSenhaLogin.Text != vazio))
                 {
                     MessageBox.Show("Informe todos os campos");
+                    ConfigurarTelaLogin("Erro Login");
+                    return;
                 }
-                ConfigurarTelaLogin("Erro Login");
+                
             }
 
         }
@@ -193,19 +204,29 @@ namespace Eventos
         {
             String vazio = "";
 
-            if ((textBoxNomeCadastro.Text != vazio) && (textBoxSobrenomeCadastro.Text != vazio) && (textBoxEmailCadastro.Text != vazio) && (textBoxSenhaCadastro.Text != vazio) && Controller.CriarConta(textBoxNomeCadastro.Text, textBoxSobrenomeCadastro.Text, textBoxEmailCadastro.Text, textBoxSenhaCadastro.Text))
+            if ((textBoxNomeCadastro.Text != vazio) && (textBoxSobrenomeCadastro.Text != vazio) && (textBoxEmailCadastro.Text != vazio) && (textBoxSenhaCadastro.Text != vazio) && LoginController.CriarConta(textBoxNomeCadastro.Text, textBoxSobrenomeCadastro.Text, textBoxEmailCadastro.Text, textBoxSenhaCadastro.Text))
             {
-                
-                Controller.SalvarDados(textBoxEmailCadastro.Text, textBoxSenhaCadastro.Text);
+
+                LoginController.SalvarCache(textBoxEmailCadastro.Text, textBoxSenhaCadastro.Text);
                 MessageBox.Show("Conta Criada Com Sucesso!");
                 ConfigurarTelaLogin("Inicio");
             }
             else
             {
-                if((textBoxNomeCadastro.Text == vazio) || (textBoxSobrenomeCadastro.Text == vazio) || (textBoxEmailCadastro.Text == vazio) || (textBoxSenhaCadastro.Text == vazio))
-                MessageBox.Show("Informe todos os campos");
+                if ((textBoxNomeCadastro.Text == vazio) || (textBoxSobrenomeCadastro.Text == vazio) || (textBoxEmailCadastro.Text == vazio) || (textBoxSenhaCadastro.Text == vazio)) { 
+                    MessageBox.Show("Informe todos os campos");
                 ConfigurarTelaLogin("Erro Cadastro");
             }
+                if (LoginController.ConfirmarDados(textBoxEmailCadastro.Text))
+                {
+                    ConfigurarTelaLogin("Esqueci minha senha");
+                }
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

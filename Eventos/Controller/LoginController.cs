@@ -6,9 +6,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Cryptography;
+using Eventos;
 
 namespace Eventos.Controller
 {
+    
+
     public class LoginController
     {
 
@@ -17,8 +20,8 @@ namespace Eventos.Controller
         String[] chave3;
         String user;
         String pass;
-        
 
+        private Gerenciador Gerenciador = new Gerenciador();
         private MySqlClassConnection MyConn = new MySqlClassConnection();
 
 
@@ -77,13 +80,11 @@ namespace Eventos.Controller
         //Função de Login
         public bool Entrar(String user, String pass)
         {
-            string database = "usuario";
-            string table = "usuario";
 
             this.user = user;
             this.pass = pass;
 
-            string comand = "Select * from "+database+"."+table+" where usuatio='" + user + "' and senha='" + pass+ "';";
+            string comand = "SELECT * FROM "+ Gerenciador.DatabaseLogin + "."+ Gerenciador.TableUsuariosLogin + " WHERE usuario='" + user + "' and senha='" + pass+ "';";
 
             if (MyConn.SelectComand(comand))
             {
@@ -93,21 +94,18 @@ namespace Eventos.Controller
             }
             return false;
         }
-
-        
-
         
         //Função Conferir se o email está cadastrado
-        private bool ConfirmarDados(String email)
+        public bool ConfirmarDados(string email)
         {
-            String comand = "Select * from test.usuario where email='" + email +"';";
+            String comand = "SELECT * FROM "+Gerenciador.DatabaseLogin+"."+Gerenciador.TableUsuariosLogin+" WHERE usuario='" + email +"';";
             return MyConn.SelectComand(comand);
         }
 
         //Função Conferir se o email e a senha estão cadastrados
         private bool ConfirmarDados(String email, String senha)
         {
-            String comand = "Select * from test.usuario where email='" + email + "' and senha='" + senha + "';";
+            String comand = "SELECT * FROM " + Gerenciador.DatabaseLogin + "." + Gerenciador.TableUsuariosLogin + " WHERE usuario='" + email + "' AND senha='" + senha + "';";
             return MyConn.SelectComand(comand);
         }
 
@@ -116,52 +114,59 @@ namespace Eventos.Controller
         {
             if (ConfirmarDados(email))
             {
-                if (ConfirmarDados(email, senha))
-                {
-                    return false;
-                }
                 return false;
             }
             else
             {
-                String comand = "INSERT INTO test.usuario (email, senha, nome, sobrenome) VALUES('" + email + "', '" + senha + "', '" + nome + "', '" + sobrenome + "');";
+                String comand = "INSERT INTO "+Gerenciador.DatabaseLogin+"."+Gerenciador.TableUsuariosLogin+" (usuario, senha) VALUES('" + email + "', '" + senha + "');";
                 MyConn.InsertComand(comand);
-                SalvarDados(email, senha);
+                SalvarCache(email, senha);
                 return true;
             }
         }
 
         //Salva os dados de login em Application.UserAppDataPath
-        public void SalvarDados(String email, String pass)
+        public void SalvarCache(String email, String pass)
         {
-            try
+            String Arquivo = @Application.UserAppDataPath+"\\appData.txt";
+            this.user = email;
+            this.pass = pass;
+
+            if (File.Exists(Arquivo))
             {
-                String Arquivo = @Application.UserAppDataPath+"\\appData.txt";
-                if (!File.Exists(Arquivo))
+                try
+                {
+                    File.Delete(Arquivo);
                     using (FileStream fileStream = File.Create(Arquivo))
                     using (StreamWriter writer = new StreamWriter(fileStream))
                     {
                         writer.WriteLine(this.EncriptarValue(email));
                         writer.WriteLine(this.EncriptarValue(pass));
                     }
-                if (File.Exists(Arquivo))
+                    File.SetAttributes(Arquivo, FileAttributes.Encrypted | FileAttributes.Hidden | FileAttributes.NotContentIndexed);
+                }
+                catch (Exception Ex)
                 {
-                    try
-                    {
-                        FileAttributes atributos = File.GetAttributes(Arquivo);
-                        File.SetAttributes(Arquivo, FileAttributes.Encrypted | FileAttributes.Hidden | FileAttributes.NotContentIndexed);
-                    }
-                    catch(Exception Ex)
-                    {
-                        Console.Write(Ex.Message);
-                    }
+                    Console.Write(Ex.Message);
                 }
             }
-            catch (IOException ex)
+            else
             {
-                // Inform the user that an error occurred.
-                MessageBox.Show("An error occurred while attempting to show the application." +
+                try
+                {
+                    using (FileStream fileStream = File.Create(Arquivo))
+                    using (StreamWriter writer = new StreamWriter(fileStream))
+                    {
+                        writer.WriteLine(this.EncriptarValue(email));
+                        writer.WriteLine(this.EncriptarValue(pass));
+                    }
+                    File.SetAttributes(Arquivo, FileAttributes.Encrypted | FileAttributes.Hidden | FileAttributes.NotContentIndexed);
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("An error occurred while attempting to show the application." +
                                 "The error is:" + ex.ToString());
+                }
             }
         }
         
@@ -179,21 +184,15 @@ namespace Eventos.Controller
                         if (chave3[j] == value.Substring(i, 1))
                         {
                             desencriptado = desencriptado + chave3[j - chave1];
-
                             break;
                         }
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                {
-                    using (FileStream fileStream = File.OpenWrite(@Application.UserAppDataPath + "\\appData.txt"))
-                    using (StreamWriter writer = new StreamWriter(fileStream))
-                    {
-                        writer.WriteLine(this.EncriptarValue(value));
-                    }
-                }
+                MessageBox.Show("An error occurred while attempting to show the application." +
+                                   "The error is:" + ex.ToString());
             }
             return desencriptado;
         }
@@ -204,17 +203,24 @@ namespace Eventos.Controller
             String encriptado = "";
             chave3 = chave2.Split('!');
 
-
-            for (int i = 0; i < value.Length; i++)
+            try
             {
-                for (int j = 0; j < chave3.Length; j++)
+                for (int i = 0; i < value.Length; i++)
                 {
-                    if (chave3[j] == value.Substring(i, 1))
+                    for (int j = 0; j < chave3.Length; j++)
                     {
-                        encriptado = encriptado + chave3[j + chave1];
-                        break;
+                        if (chave3[j] == value.Substring(i, 1))
+                        {
+                            encriptado = encriptado + chave3[j + chave1];
+                            break;
+                        }
                     }
                 }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("An error occurred while attempting to show the application." +
+                                "The error is:" + ex.ToString());
             }
             return encriptado;
         }

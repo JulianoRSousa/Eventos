@@ -128,7 +128,6 @@ namespace Eventos
                 return false;
             }
         }
-
         
         public bool InsertComand(String comand)
         {

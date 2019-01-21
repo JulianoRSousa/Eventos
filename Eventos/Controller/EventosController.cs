@@ -9,16 +9,16 @@ namespace Eventos.Controller
 {
     class EventosController
     {
-        private LoginController LoginController = new LoginController();
-        private MySqlClassConnection MyConn = new MySqlClassConnection();
+        private readonly LoginController LoginController = new LoginController();
+        private readonly MySqlClassConnection MyConn = new MySqlClassConnection();
 
         public bool Iniciar(string user, string pass)
         {
-            ModelUsuario dadosUsuario = MyConn.ObterDados(user, pass);
+           // ModelUsuario dadosUsuario = MyConn.ObterDados(user, pass);
             return false;
         }
 
-        public ModelUsuario ObterDados(string email, string senha)
+        public bool ObterDados(string email, string senha)
         {
 
             /*
@@ -27,7 +27,8 @@ namespace Eventos.Controller
             Dados = MyConn.SelectGetString("nome", "test", "usuario", "email", email);
             return Dados;
             */
-            return MyConn.ObterDados(email, senha);
+          //  return MyConn.ObterDados(email, senha);
+          return false;
         }
         
     }

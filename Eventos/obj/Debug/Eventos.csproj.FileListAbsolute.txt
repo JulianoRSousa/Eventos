@@ -64,3 +64,21 @@ G:\Meu Drive\Programação\VisualStudio\Eventos - Cópia\Eventos\obj\Debug\Event
 G:\Meu Drive\Programação\VisualStudio\Eventos - Cópia\Eventos\obj\Debug\Eventos.exe
 G:\Meu Drive\Programação\VisualStudio\Eventos - Cópia\Eventos\obj\Debug\Eventos.pdb
 G:\Meu Drive\Programação\VisualStudio\Eventos - Cópia\Eventos\obj\Debug\Eventos.csprojAssemblyReference.cache
+B:\Repos\Eventos\Eventos\obj\Debug\Eventos.csprojAssemblyReference.cache
+B:\Repos\Eventos\Eventos\obj\Debug\Eventos.Eventos.resources
+B:\Repos\Eventos\Eventos\obj\Debug\Eventos.Login.resources
+B:\Repos\Eventos\Eventos\obj\Debug\Eventos.Properties.Resources.resources
+B:\Repos\Eventos\Eventos\obj\Debug\Eventos.csproj.GenerateResource.cache
+B:\Repos\Eventos\Eventos\obj\Debug\Eventos.csproj.CoreCompileInputs.cache
+B:\Repos\Eventos\Eventos\obj\Debug\Eventos.exe
+B:\Repos\Eventos\Eventos\obj\Debug\Eventos.pdb
+B:\Repos\Eventos\Eventos\bin\Debug\Eventos.exe.config
+B:\Repos\Eventos\Eventos\bin\Debug\Eventos.exe.manifest
+B:\Repos\Eventos\Eventos\bin\Debug\Eventos.application
+B:\Repos\Eventos\Eventos\bin\Debug\Eventos.exe
+B:\Repos\Eventos\Eventos\bin\Debug\Eventos.pdb
+B:\Repos\Eventos\Eventos\bin\Debug\Google.Protobuf.dll
+B:\Repos\Eventos\Eventos\bin\Debug\MySql.Data.xml
+B:\Repos\Eventos\Eventos\obj\Debug\Eventos.exe.manifest
+B:\Repos\Eventos\Eventos\obj\Debug\Eventos.application
+B:\Repos\Eventos\Eventos\obj\Debug\Eventos.csproj.CopyComplete

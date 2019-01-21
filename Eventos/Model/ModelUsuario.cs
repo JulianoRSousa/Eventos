@@ -32,6 +32,7 @@ namespace Eventos
         }
         public ModelUsuario()
         {
+            //oloko
         }
 
     }

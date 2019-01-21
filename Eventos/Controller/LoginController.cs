@@ -77,10 +77,13 @@ namespace Eventos.Controller
         //Função de Login
         public bool Entrar(String user, String pass)
         {
+            string database = "usuario";
+            string table = "usuario";
+
             this.user = user;
             this.pass = pass;
 
-            String comand = "Select * from test.usuario where email='" + user + "' and senha='" + pass+ "';";
+            string comand = "Select * from "+database+"."+table+" where usuatio='" + user + "' and senha='" + pass+ "';";
 
             if (MyConn.SelectComand(comand))
             {

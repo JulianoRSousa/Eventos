@@ -169,7 +169,36 @@ namespace Eventos.Controller
                 }
             }
         }
-        
+
+
+        //Encripta os dados
+        private String EncriptarValue(String value)
+        {
+            String encriptado = "";
+            chave3 = chave2.Split('!');
+
+            try
+            {
+                for (int i = 0; i < value.Length; i++)
+                {
+                    for (int j = 0; j < chave3.Length; j++)
+                    {
+                        if (chave3[j] == value.Substring(i, 1))
+                        {
+                            encriptado = encriptado + chave3[j + chave1];
+                            break;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while attempting to show the application." +
+                                "The error is:" + ex.ToString());
+            }
+            return encriptado;
+        }
+
         //Retira a encriptação
         private String DesencriptarValue(String value)
         {
@@ -197,33 +226,6 @@ namespace Eventos.Controller
             return desencriptado;
         }
         
-        //Encripta os dados
-        private String EncriptarValue(String value)
-        {
-            String encriptado = "";
-            chave3 = chave2.Split('!');
-
-            try
-            {
-                for (int i = 0; i < value.Length; i++)
-                {
-                    for (int j = 0; j < chave3.Length; j++)
-                    {
-                        if (chave3[j] == value.Substring(i, 1))
-                        {
-                            encriptado = encriptado + chave3[j + chave1];
-                            break;
-                        }
-                    }
-                }
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show("An error occurred while attempting to show the application." +
-                                "The error is:" + ex.ToString());
-            }
-            return encriptado;
-        }
         
     }
 }

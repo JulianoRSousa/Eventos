@@ -42,7 +42,7 @@ namespace Eventos
         }
         */
 
-        //Retorna Valor do campo especificado utilizando 2 parametros
+        //Retorna Valor do campo especificado utilizando 2 parametros(comunmente usuario e senha)*(podendo ser outro)
         public String SelectGetString(String Campo, String Database, String Tabela, String Parametro1, String Valor1, String Parametro2, String Valor2)
         {
             String resultado = "nullString";
@@ -71,7 +71,7 @@ namespace Eventos
             }
         }
 
-        //Retorna Valor do campo especificado utilizando 1 parametro
+        //Retorna Valor do campo especificado utilizando 1 parametro(comunmente usuario)*(podendo ser outro)
         public String SelectGetString(String Campo, String Database, String Tabela, String Parametro, String Valor)
         {
             String resultado = "nullString";
@@ -138,25 +138,24 @@ namespace Eventos
         //Inserir no Banco de dados
         public bool InsertComand(String comand)
         {
-            String MyConnection = "datasource=" + Gerenciador.DbEndereço + ";port=" + Gerenciador.DbPorta + ";username=" + Gerenciador.DbAdminUserLogin + ";password=" + Gerenciador.DbAdminPassLogin + ";";
-            int count = 0;
+            string MyConnection = "datasource=" + Gerenciador.DbEndereço + ";port=" + Gerenciador.DbPorta + ";username=" + Gerenciador.DbAdminUserLogin + ";password=" + Gerenciador.DbAdminPassLogin + ";";
             MySqlConnection MyConn = new MySqlConnection(MyConnection);
 
             try
             {
-                MySqlDataAdapter adapter = new MySqlDataAdapter();
                 MyConn.Open();
-                MySqlCommand InsertCommand = new MySqlCommand(comand, MyConn);
-                adapter.InsertCommand.ExecuteReader();
-                if(count!=0)
-                return true;
-                MessageBox.Show("count = 0");
+                MySqlCommand SelectCommand = new MySqlCommand(comand, MyConn);
+                MySqlDataReader MyReader = SelectCommand.ExecuteReader();
+                if (MyReader.HasRows)
+                {
+                    return true;
+                }
                 return false;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Não deu insert "+ex.Message);
-                return false;
+                Console.Write(ex.Message);
+                return false ;
             }
             finally
             {

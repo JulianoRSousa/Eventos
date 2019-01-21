@@ -188,7 +188,7 @@ namespace Eventos
             }
             else
             {
-                if ((textBoxEmailLogin.Text != vazio) || (textBoxSenhaLogin.Text != vazio))
+                if ((textBoxEmailLogin.Text == vazio) || (textBoxSenhaLogin.Text == vazio))
                 {
                     MessageBox.Show("Informe todos os campos");
                     ConfigurarTelaLogin("Erro Login");
@@ -222,11 +222,6 @@ namespace Eventos
                     ConfigurarTelaLogin("Esqueci minha senha");
                 }
             }
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

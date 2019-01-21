@@ -169,8 +169,7 @@ namespace Eventos.Controller
                 }
             }
         }
-
-
+        
         //Encripta os dados
         private String EncriptarValue(String value)
         {

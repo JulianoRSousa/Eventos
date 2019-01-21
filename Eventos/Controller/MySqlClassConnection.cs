@@ -10,8 +10,10 @@ namespace Eventos
 {
     public class MySqlClassConnection
     {
-        String MyConnection = "datasource = localhost; port = 3306; username = root; password = root";
+        
 
+        private Gerenciador Gerenciador = new Gerenciador();
+        
       /*  public ModelUsuario ObterDados(string email, string senha)
         {
             ModelUsuario dados = new ModelUsuario();
@@ -47,7 +49,7 @@ namespace Eventos
 
             try
             {
-                MyConnection = "datasource = localhost; port = 3306; username = root; password = root";
+                String MyConnection = "datasource=" + Gerenciador.DbEndereço + ";port=" + Gerenciador.DbPorta + ";username=" + Gerenciador.DbAdminUserLogin + ";password=" + Gerenciador.DbAdminPassLogin + ";";
                 MySqlConnection MyConn = new MySqlConnection(MyConnection);
                 MyConn.Open();
                 MySqlCommand SelectCommand = new MySqlCommand("SELECT " + Campo + " FROM " + Database + "." + Tabela + " WHERE " + Parametro1 + "='" + Valor1 + "' AND " + Parametro2 + "='" + Valor2 + "';", MyConn);
@@ -76,6 +78,7 @@ namespace Eventos
 
             try
             {
+                String MyConnection = "datasource=" + Gerenciador.DbEndereço + ";port=" + Gerenciador.DbPorta + ";username=" + Gerenciador.DbAdminUserLogin + ";password=" + Gerenciador.DbAdminPassLogin + ";";
                 MySqlConnection MyConn = new MySqlConnection(MyConnection);
                 MyConn.Open();
                 MySqlCommand SelectCommand = new MySqlCommand("SELECT " + Campo + " FROM " + Database + "." + Tabela + " WHERE " + Parametro + "='" + Valor + "';", MyConn);
@@ -101,6 +104,7 @@ namespace Eventos
         {
             try
             {
+                String MyConnection = "datasource=" + Gerenciador.DbEndereço + ";port=" + Gerenciador.DbPorta + ";username=" + Gerenciador.DbAdminUserLogin + ";password=" + Gerenciador.DbAdminPassLogin + ";";
                 int count = 0;
                 MySqlConnection MyConn = new MySqlConnection(MyConnection);
                 MyConn.Open();
@@ -113,11 +117,13 @@ namespace Eventos
                 }
                 if (count == 1)
                 {
+                    MessageBox.Show("count  == 1 (SelectComand)");
                     MyConn.Close();
                     return true;
                 }
                 else
                 {
+                    MessageBox.Show("count  < 1 (SelectComand)");
                     MyConn.Close();
                     return false;
                 }
@@ -129,23 +135,32 @@ namespace Eventos
             }
         }
         
+        //Inserir no Banco de dados
         public bool InsertComand(String comand)
         {
+            String MyConnection = "datasource=" + Gerenciador.DbEndereço + ";port=" + Gerenciador.DbPorta + ";username=" + Gerenciador.DbAdminUserLogin + ";password=" + Gerenciador.DbAdminPassLogin + ";";
+            int count = 0;
+            MySqlConnection MyConn = new MySqlConnection(MyConnection);
+
             try
             {
-                String MyConnection = "datasource=localhost;port=3306;username=root;password=root";
-                MySqlConnection MyConn = new MySqlConnection(MyConnection);
+                MySqlDataAdapter adapter = new MySqlDataAdapter();
                 MyConn.Open();
-                MySqlDataReader MyReader;
                 MySqlCommand InsertCommand = new MySqlCommand(comand, MyConn);
-                MyReader = InsertCommand.ExecuteReader();
-                    MyConn.Close();
-                    return true;
+                adapter.InsertCommand.ExecuteReader();
+                if(count!=0)
+                return true;
+                MessageBox.Show("count = 0");
+                return false;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Não deu "+ex.Message);
+                MessageBox.Show("Não deu insert "+ex.Message);
                 return false;
+            }
+            finally
+            {
+                MyConn.Close();
             }
         }
     }    

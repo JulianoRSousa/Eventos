@@ -1,0 +1,66 @@
+C:\Users\Juliano\Desktop\Programação\VisualStudio\Eventos\Eventos\bin\Debug\Eventos.exe.config
+C:\Users\Juliano\Desktop\Programação\VisualStudio\Eventos\Eventos\bin\Debug\Eventos.exe
+C:\Users\Juliano\Desktop\Programação\VisualStudio\Eventos\Eventos\bin\Debug\Eventos.pdb
+C:\Users\Juliano\Desktop\Programação\VisualStudio\Eventos\Eventos\obj\Debug\Eventos.csprojAssemblyReference.cache
+C:\Users\Juliano\Desktop\Programação\VisualStudio\Eventos\Eventos\obj\Debug\Eventos.Login.resources
+C:\Users\Juliano\Desktop\Programação\VisualStudio\Eventos\Eventos\obj\Debug\Eventos.Properties.Resources.resources
+C:\Users\Juliano\Desktop\Programação\VisualStudio\Eventos\Eventos\obj\Debug\Eventos.csproj.GenerateResource.cache
+C:\Users\Juliano\Desktop\Programação\VisualStudio\Eventos\Eventos\obj\Debug\Eventos.csproj.CoreCompileInputs.cache
+C:\Users\Juliano\Desktop\Programação\VisualStudio\Eventos\Eventos\obj\Debug\Eventos.exe
+C:\Users\Juliano\Desktop\Programação\VisualStudio\Eventos\Eventos\obj\Debug\Eventos.pdb
+C:\Users\Juliano\Desktop\Programação\VisualStudio\Eventos\Eventos\bin\Debug\Eventos.exe.manifest
+C:\Users\Juliano\Desktop\Programação\VisualStudio\Eventos\Eventos\bin\Debug\Eventos.application
+C:\Users\Juliano\Desktop\Programação\VisualStudio\Eventos\Eventos\obj\Debug\Eventos.exe.manifest
+C:\Users\Juliano\Desktop\Programação\VisualStudio\Eventos\Eventos\obj\Debug\Eventos.application
+C:\Users\Juliano\Desktop\Programação\VisualStudio\Eventos - Cópia\Eventos\bin\Debug\Eventos.exe.config
+C:\Users\Juliano\Desktop\Programação\VisualStudio\Eventos - Cópia\Eventos\bin\Debug\Eventos.exe.manifest
+C:\Users\Juliano\Desktop\Programação\VisualStudio\Eventos - Cópia\Eventos\bin\Debug\Eventos.application
+C:\Users\Juliano\Desktop\Programação\VisualStudio\Eventos - Cópia\Eventos\bin\Debug\Eventos.exe
+C:\Users\Juliano\Desktop\Programação\VisualStudio\Eventos - Cópia\Eventos\bin\Debug\Eventos.pdb
+C:\Users\Juliano\Desktop\Programação\VisualStudio\Eventos - Cópia\Eventos\obj\Debug\Eventos.csprojAssemblyReference.cache
+C:\Users\Juliano\Desktop\Programação\VisualStudio\Eventos - Cópia\Eventos\obj\Debug\Eventos.Login.resources
+C:\Users\Juliano\Desktop\Programação\VisualStudio\Eventos - Cópia\Eventos\obj\Debug\Eventos.Properties.Resources.resources
+C:\Users\Juliano\Desktop\Programação\VisualStudio\Eventos - Cópia\Eventos\obj\Debug\Eventos.csproj.GenerateResource.cache
+C:\Users\Juliano\Desktop\Programação\VisualStudio\Eventos - Cópia\Eventos\obj\Debug\Eventos.csproj.CoreCompileInputs.cache
+C:\Users\Juliano\Desktop\Programação\VisualStudio\Eventos - Cópia\Eventos\obj\Debug\Eventos.exe.manifest
+C:\Users\Juliano\Desktop\Programação\VisualStudio\Eventos - Cópia\Eventos\obj\Debug\Eventos.application
+C:\Users\Juliano\Desktop\Programação\VisualStudio\Eventos - Cópia\Eventos\obj\Debug\Eventos.exe
+C:\Users\Juliano\Desktop\Programação\VisualStudio\Eventos - Cópia\Eventos\obj\Debug\Eventos.pdb
+C:\Users\Juliano\Desktop\Programação\VisualStudio\Eventos - Cópia\Eventos\bin\Debug\MySql.Data.dll
+C:\Users\Juliano\Desktop\Programação\VisualStudio\Eventos - Cópia\Eventos\bin\Debug\Google.Protobuf.dll
+C:\Users\Juliano\Desktop\Programação\VisualStudio\Eventos - Cópia\Eventos\bin\Debug\MySql.Data.xml
+C:\Users\Juliano\Desktop\Programação\VisualStudio\Eventos - Cópia\Eventos\obj\Debug\Eventos.csproj.CopyComplete
+C:\Users\JRS\Desktop\Code\Eventos - Cópia\Eventos\bin\Debug\Eventos.exe.config
+C:\Users\JRS\Desktop\Code\Eventos - Cópia\Eventos\bin\Debug\Eventos.exe.manifest
+C:\Users\JRS\Desktop\Code\Eventos - Cópia\Eventos\bin\Debug\Eventos.application
+C:\Users\JRS\Desktop\Code\Eventos - Cópia\Eventos\bin\Debug\Eventos.exe
+C:\Users\JRS\Desktop\Code\Eventos - Cópia\Eventos\bin\Debug\Eventos.pdb
+C:\Users\JRS\Desktop\Code\Eventos - Cópia\Eventos\obj\Debug\Eventos.Eventos.resources
+C:\Users\JRS\Desktop\Code\Eventos - Cópia\Eventos\obj\Debug\Eventos.Login.resources
+C:\Users\JRS\Desktop\Code\Eventos - Cópia\Eventos\obj\Debug\Eventos.Properties.Resources.resources
+C:\Users\JRS\Desktop\Code\Eventos - Cópia\Eventos\obj\Debug\Eventos.csproj.GenerateResource.cache
+C:\Users\JRS\Desktop\Code\Eventos - Cópia\Eventos\obj\Debug\Eventos.csproj.CoreCompileInputs.cache
+C:\Users\JRS\Desktop\Code\Eventos - Cópia\Eventos\obj\Debug\Eventos.exe.manifest
+C:\Users\JRS\Desktop\Code\Eventos - Cópia\Eventos\obj\Debug\Eventos.application
+C:\Users\JRS\Desktop\Code\Eventos - Cópia\Eventos\obj\Debug\Eventos.csproj.CopyComplete
+C:\Users\JRS\Desktop\Code\Eventos - Cópia\Eventos\obj\Debug\Eventos.exe
+C:\Users\JRS\Desktop\Code\Eventos - Cópia\Eventos\obj\Debug\Eventos.pdb
+C:\Users\JRS\Desktop\Code\Eventos - Cópia\Eventos\obj\Debug\Eventos.csprojAssemblyReference.cache
+G:\Meu Drive\Programação\VisualStudio\Eventos - Cópia\Eventos\bin\Debug\Eventos.exe.config
+G:\Meu Drive\Programação\VisualStudio\Eventos - Cópia\Eventos\bin\Debug\Eventos.exe.manifest
+G:\Meu Drive\Programação\VisualStudio\Eventos - Cópia\Eventos\bin\Debug\Eventos.application
+G:\Meu Drive\Programação\VisualStudio\Eventos - Cópia\Eventos\bin\Debug\Eventos.exe
+G:\Meu Drive\Programação\VisualStudio\Eventos - Cópia\Eventos\bin\Debug\Eventos.pdb
+G:\Meu Drive\Programação\VisualStudio\Eventos - Cópia\Eventos\bin\Debug\Google.Protobuf.dll
+G:\Meu Drive\Programação\VisualStudio\Eventos - Cópia\Eventos\bin\Debug\MySql.Data.xml
+G:\Meu Drive\Programação\VisualStudio\Eventos - Cópia\Eventos\obj\Debug\Eventos.Eventos.resources
+G:\Meu Drive\Programação\VisualStudio\Eventos - Cópia\Eventos\obj\Debug\Eventos.Login.resources
+G:\Meu Drive\Programação\VisualStudio\Eventos - Cópia\Eventos\obj\Debug\Eventos.Properties.Resources.resources
+G:\Meu Drive\Programação\VisualStudio\Eventos - Cópia\Eventos\obj\Debug\Eventos.csproj.GenerateResource.cache
+G:\Meu Drive\Programação\VisualStudio\Eventos - Cópia\Eventos\obj\Debug\Eventos.csproj.CoreCompileInputs.cache
+G:\Meu Drive\Programação\VisualStudio\Eventos - Cópia\Eventos\obj\Debug\Eventos.exe.manifest
+G:\Meu Drive\Programação\VisualStudio\Eventos - Cópia\Eventos\obj\Debug\Eventos.application
+G:\Meu Drive\Programação\VisualStudio\Eventos - Cópia\Eventos\obj\Debug\Eventos.csproj.CopyComplete
+G:\Meu Drive\Programação\VisualStudio\Eventos - Cópia\Eventos\obj\Debug\Eventos.exe
+G:\Meu Drive\Programação\VisualStudio\Eventos - Cópia\Eventos\obj\Debug\Eventos.pdb
+G:\Meu Drive\Programação\VisualStudio\Eventos - Cópia\Eventos\obj\Debug\Eventos.csprojAssemblyReference.cache

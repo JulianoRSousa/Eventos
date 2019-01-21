@@ -84,6 +84,7 @@
     <Compile Include="CustomControl1.Designer.cs">
       <DependentUpon>CustomControl1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gerenciador.cs" />
     <Compile Include="Model\ModelUsuario.cs" />
     <Compile Include="View\Eventos.cs">
       <SubType>Form</SubType>

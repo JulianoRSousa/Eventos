@@ -86,6 +86,12 @@
     <Compile Include="View\Eventos.Designer.cs">
       <DependentUpon>Eventos.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FeedItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\FeedItem.Designer.cs">
+      <DependentUpon>FeedItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="View\Eventos.resx">
       <DependentUpon>Eventos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FeedItem.resx">
+      <DependentUpon>FeedItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

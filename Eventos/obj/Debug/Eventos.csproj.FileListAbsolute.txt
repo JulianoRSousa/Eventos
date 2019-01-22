@@ -82,3 +82,4 @@ B:\Repos\Eventos\Eventos\bin\Debug\MySql.Data.xml
 B:\Repos\Eventos\Eventos\obj\Debug\Eventos.exe.manifest
 B:\Repos\Eventos\Eventos\obj\Debug\Eventos.application
 B:\Repos\Eventos\Eventos\obj\Debug\Eventos.csproj.CopyComplete
+B:\Repos\Eventos\Eventos\obj\Debug\Eventos.View.FeedItem.resources

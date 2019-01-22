@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Eventos.exe" size="120272">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Eventos.exe" size="124880">
       <assemblyIdentity name="Eventos" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>okqnXN+Xpm7wOnoPV+X5AfdK36hDDo86QxfVrU4T+UI=</dsig:DigestValue>
+        <dsig:DigestValue>2kU12uSVSowXPjV+MoDXyPOzUmWd1qPlmjApqaY1srM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

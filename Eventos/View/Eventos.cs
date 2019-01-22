@@ -1,4 +1,5 @@
 ﻿using Eventos.Controller;
+using Eventos.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,7 +18,7 @@ namespace Eventos
         LoginController controller = new LoginController();
         EventosController EventosController = new EventosController();
         private MySqlClassConnection MyConn = new MySqlClassConnection();
-        int yFeed = 0;
+        int yFeed = 50;
         int y = 1;
 
         public Eventos()
@@ -25,7 +26,7 @@ namespace Eventos
             InitializeComponent();
             this.Reconectar();
         }
-        
+
         private void Reconectar()
         {
             if (!controller.Reconectar())
@@ -42,12 +43,7 @@ namespace Eventos
             Application.Restart();
             Environment.Exit(0);
         }
-
-        private void Eventos_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void button1_Click(object sender, EventArgs e)
         {
             adicionarFeed();
@@ -55,15 +51,27 @@ namespace Eventos
 
         private int adicionarFeed()
         {
-            criarFeed(yFeed);
-            yFeed = y * 260;
+            FeedItem feed = new FeedItem();
+            feed.Location = new Point(17, yFeed);
+            yFeed = (y * 235) + 50;
             y++;
+            this.panelFeed.Controls.Add(feed);
             return yFeed;
         }
-
-        public void criarFeed(int valory)
+        
+        private void buttonClose_Click(object sender, EventArgs e)
         {
-            
+            Application.Exit();
+        }
+
+        private void buttonMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            adicionarFeed();
         }
     }
 }

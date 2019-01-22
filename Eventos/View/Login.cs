@@ -96,7 +96,7 @@ namespace Eventos
         }
         
         //Configurar tela
-        public void ConfigurarTelaLogin(String tela)
+        public void ConfigurarTelaLogin(string tela)
         {
             switch (tela)
             {

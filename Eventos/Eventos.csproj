@@ -78,20 +78,7 @@
     <Compile Include="Controller\EventosController.cs" />
     <Compile Include="Controller\LoginController.cs" />
     <Compile Include="Controller\MySqlClassConnection.cs" />
-    <Compile Include="CustomControl1.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="CustomControl1.Designer.cs">
-      <DependentUpon>CustomControl1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Gerenciador.cs" />
-    <Compile Include="Model\Componentes.cs" />
-    <Compile Include="Model\EventoFeedComponente.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Model\EventoFeedComponente.Designer.cs">
-      <DependentUpon>EventoFeedComponente.cs</DependentUpon>
-    </Compile>
     <Compile Include="Model\ModelUsuario.cs" />
     <Compile Include="View\Eventos.cs">
       <SubType>Form</SubType>
@@ -107,9 +94,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Model\EventoFeedComponente.resx">
-      <DependentUpon>EventoFeedComponente.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\Eventos.resx">
       <DependentUpon>Eventos.cs</DependentUpon>
     </EmbeddedResource>
